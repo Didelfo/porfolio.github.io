@@ -1,0 +1,186 @@
+:root {
+  --color-fondo: #1E1E2E; 
+  --color-fondo2: #2A2A3C;
+  --color-moradito: #b696f1;
+  --color-rosita: #F7C6C7;
+  --color-blanquito: #ECECF1;
+  --color-gris: #A6A6C3;
+  --color-azul: #8EE3EF;
+  --color-amarillo: #FFE185;
+  --color-rojo: #FF9E9E;
+  --color-verde: #B9FBC0;
+} 
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-blanquito);
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar {
+  width: 15%;
+  background-color: var(--color-fondo2);
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  margin-top: 0px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-moradito);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: var(--color-moradito); 
+  margin: 10px 0 5px;
+}
+
+h3 {
+  color: var(--color-amarillo);
+}
+
+.descripcion {
+  color: var(--color-amarillo);
+  font-size: 14px;
+}
+
+.menu a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--color-blanquito);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: var(--color-moradito);
+  color: var(--color-blanquito);
+}
+
+.content {
+  margin-left: 15%;
+  padding: 30px;
+}
+
+.section {
+  display: none;
+  background-color: var(--color-fondo2); 
+  border-radius: 20px;
+  padding: 2%;
+  margin: 3%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.section.active {
+  display: block;
+}
+
+h2 {
+  color: var(--color-moradito); 
+  margin-bottom: 20px;
+}
+
+
+
+footer {
+  background-color: var(--color-fondo2);
+  text-align: center;
+  padding: 5px;
+  color: var(--color-blanquito);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 10px;
+    justify-content: space-around;
+  }
+
+  .sidebar-header {
+    margin-bottom: 10px;
+  }
+
+  .foto-perfil {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu a {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 8px;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+.morado {
+  color: var(--color-moradito)
+}
+
+.azul {
+  color: var(--color-azul)
+}
+
+.amarillo {
+  color: var(--color-amarillo)
+}
